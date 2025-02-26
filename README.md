@@ -8,7 +8,7 @@ You can read the text explanation of all these React 19 updates (in Russian) by 
 - **useActionState()**
 - **useOptimistic()**
 - **useFormStatus()**
-- **use() hook**
+- **use()**
 - **meta tags**
 
 To cause an error in an input form, simply type "error" into it.
