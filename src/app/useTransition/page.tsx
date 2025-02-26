@@ -1,10 +1,10 @@
 "use client";
-import BackArrow from "@/components/back-arrow/BackArrow";
-import { WithoutUseOptimistic } from "@/components/use-optimistic/WithoutUseOptimistic";
-import { WithUseOptimistic } from "@/components/use-optimistic/WithUseOptimistic";
 import { useState } from "react";
+import BackArrow from "@/components/back-arrow/BackArrow";
+import WithoutTransition from "@/components/use-transition/WithoutTransition";
+import { WithTransition } from "@/components/use-transition/WithTransition";
 
-export default function UseOptimisticPage() {
+export default function UseTransitionPage() {
     const [tab, setTab] = useState("");
 
     return (
@@ -19,7 +19,7 @@ export default function UseOptimisticPage() {
                             : "text-white"
                     }`}
                 >
-                    Without Optimistic
+                    Without Transition
                 </button>
                 <button
                     onClick={() => setTab("with")}
@@ -27,11 +27,11 @@ export default function UseOptimisticPage() {
                         tab === "with" ? "bg-gray-100 text-black" : "text-white"
                     }`}
                 >
-                    With Optimistic
+                    With Transition
                 </button>
             </div>
-            {tab === "without" && <WithoutUseOptimistic />}
-            {tab === "with" && <WithUseOptimistic />}
+            {tab === "without" && <WithoutTransition />}
+            {tab === "with" && <WithTransition />}
         </div>
     );
 }
